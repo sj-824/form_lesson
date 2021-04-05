@@ -1,1 +1,126 @@
 @charset "utf-8";
+
+.wrapper {
+  background-color: #f2f6f7;
+  width: 100%;
+  padding: 32px 0;
+}
+
+.inner {
+  width: 640px;
+  margin: 0 auto;
+  padding: 48px 64px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.inner-title {
+  color: #545658;
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.facebook-google {
+  display: flex;
+  width: 100%;
+  margin: 0 0 8px 0;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.google {
+  margin-left: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px;
+  border: solid 1px #d9d9d9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-init {
+  text-decoration: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn-facebook {
+  background-color: #3b5999;
+  border-color: #3b5999;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-facebook:hover {
+  background-color: #344e87;
+}
+
+.btn-google {
+  background-color: #fff;
+  color: #dd4b39;
+  transition: 0.5s;
+}
+
+.btn-google:hover {
+  background-color: #f7f7f7;
+}
+
+.main .caution {
+  color: #949697;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sub-title {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.sub-title > p {
+  background-color: #fff;
+  color: #949697;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.sub-title::before {
+  content: "";
+  height: 1px;
+  width: 512px;
+  background: #ececec;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-content__name {
+  display: flex;
+}
+
+.form-content__name__first {
+  margin-left: 8px;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
