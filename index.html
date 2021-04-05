@@ -11,10 +11,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="inner">
+      <div class="inner inner__blank">
         <div class="main">
-          <h1 class="inner-title">アカウント作成</h1>
-          <div class="facebook-google">
+          <h1 class="inner-title inner-title__blank inner-title__move">アカウント作成</h1>
+          <div class="sns-choice extra-text__blank flex">
             <div class="half-width facebook">
               <a href="#" class="full-width btn btn-init btn-facebook">Facebookでスタート</a>
             </div>
@@ -22,25 +22,102 @@
               <a href="#" class="full-width btn btn-init btn-google">Googleでスタート</a>
             </div>
           </div>
-          <p class="caution">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
+          <p class="caution default-text">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
           <div class="sub-title">
-            <p>アカウント情報</p>
+            <p class="default-text">アカウント情報</p>
           </div>
           <form action="#" method="POST" class="form-content">
-            <div class="form-content__name full-width">
+            <div class="form-content__name full-width row-blank__bottom flex">
               <div class="form-content__name__last half-width">
-                <label class="label" for="lastname">名字<span class="rice">*</span></label>
-                <input class="input" type="text">
+                <p class="form-item" for="lastname">名字<span class="rice"> ※</span></p>
+                <input class="input-type text-color full-width" type="text" required>
               </div>
               <div class="form-content__name__first half-width">
-                <label class="label" for="firstname">名前<span class="rice">*</span></label>
-                <input class="input" type="text">
+                <p class="form-item" for="firstname">名前<span class="rice"> ※</span></p>
+                <input class="input-type text-color full-width" type="text" required>
               </div>
+            </div>
+            <div class="gender text-color row-blank__bottom">
+              <p class="form-item">性別</p>
+              <div class="gender-choice flex">
+                <label class="gender-label">
+                  <input type="radio" name="gender" value="male" class="check">
+                  <span class="label-span">男性</span>
+                </label>
+                <label class="gender-label">
+                  <input type="radio" name="gender" value="female" class="check">
+                  <span class="label-span">女性</span>
+                </label>
+                <label class="gender-label">
+                  <input type="radio" name="gender" value="other" class="check">
+                  <span class="label-span">その他</span>
+                </label>
+              </div>
+            </div>
+            <div class="birthplace half-width row-blank__bottom">
+              <p class="form-item">出身</p>
+              <div class="birthplace-choice">
+                <select name="birthplace" id="birthplace" class="input-type text-color full-width">
+                  <option value="東京">東京</option>
+                  <option value="千葉">千葉</option>
+                  <option value="埼玉">埼玉</option>
+                  <option value="神奈川">神奈川</option>
+                </select>
+              </div>
+            </div>
+            <div class="email row-blank__bottom">
+              <div class="email-form full-width">
+                <p class="form-item">Eメール<span class="rice"> ※</span></p>
+                <input type="email" class="full-width input-type text-color" placeholder="ex) hoge@example.com" required>
+              </div>
+            </div>
+            <div class="phone-number row-blank__bottom">
+              <p class="form-item">電話番号</p>
+              <input type="tel" name="phone" maxlength="11" placeholder="ex) 09012345678" class="full-width input-type text-color">
+            </div>
+            <div class="password row-blank__bottom">
+              <p class="form-item">パスワード<span class="rice"> ※</span></p>
+              <input type="password" class="full-width input-type text-color">
+            </div>
+            <div class="password row-blank__bottom">
+              <p class="form-item">パスワード(確認用)<span class="rice"> ※</span></p>
+              <input type="password" class="full-width input-type text-color">
+            </div>
+            <div class="course text-color row-blank__bottom">
+              <p class="form-item">希望コース</p>
+              <div class="course-choice">
+                <label class="front label-blank__bottom">
+                  <input type="checkbox" name="course" value="front" class="check">
+                  <span class="label-span">フロントエンド</span>
+                </label>
+                <label class="back label-blank__bottom">
+                  <input type="checkbox" name="course" value="back" class="check">
+                  <span class="label-span">バックエンド</span>
+                </label>
+                <label class="application">
+                  <input type="checkbox" name="course" value="application" class="check">
+                  <span class="label-span">アプリ</span>
+                </label>
+              </div>
+            </div>
+            <div class="remark row-blank__bottom">
+              <p class="form-item">備考</p>
+              <textarea name="remark" class="input-init input-type text-color full-width" placeholder="何かあればご記入ください"></textarea>
+            </div>
+            <div class="submit row-blank__bottom">
+              <input type="button" value="アカウント作成" class="btn full-width">
+            </div>
+            <div class="agree">
+              <p class="extra-text">アカウントを作成することにより、<a href="#" class="link-color">利用規約</a>と<a href="#" class="link-color">プライバシーポリシー</a>に同意するものとします。</p>
             </div>
           </form>
         </div>
-        <div class="footer">
-        </div>
+      </div>
+      <div class="footer">
+        <p class="login extra-text extra-text__blank">すでにアカウントをお持ちですか？
+          <a href="#" class="link-color"> ログイン</a>
+        </p>
+        <a href="#" class="register-mail link-color extra-text extra-text__blank">認証メールが届きませんか？</a>
       </div>
     </div>
   </body>
