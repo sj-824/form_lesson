@@ -1,36 +1,6 @@
 @charset "utf-8";
 
-.wrapper {
-  background-color: #f2f6f7;
-  width: 100%;
-  padding: 32px 0;
-}
-
-.inner {
-  width: 640px;
-  background-color: #fff;
-  box-sizing: border-box;
-  box-shadow: 0 0 4px 0 rgb(0 0 0 / 18%);
-  border-radius: 4px;
-}
-
-.inner__blank {
-  margin: 0 auto 32px;
-  padding: 48px 64px;
-}
-
-.inner-title {
-  color: #545658;
-  font-size: 24px;
-}
-
-.inner-title__blank {
-  margin-bottom: 24px;
-}
-
-.inner-title__move {
-  text-align: center;
-}
+/* 共通項 */
 
 .extra-text__blank {
   margin-bottom: 8px;
@@ -49,19 +19,120 @@
 }
 
 .btn {
-  display: inline-block;
-  padding: 13px;
   border: solid 1px #d9d9d9;
   border-radius: 4px;
   box-sizing: border-box;
+  display: inline-block;
+  padding: 13px;
   font-size: 13px;
   font-weight: 500;
   text-align: center;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .btn-init {
   text-decoration: none;
+}
+
+.text__center {
+  text-align: center;
+}
+
+.default-text {
+  color: #949697;
+  font-size: 12px;
+}
+
+.form-item {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #545658;
+}
+
+.form-item > span {
+  color: #dd4b39;
+}
+
+.input-init {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.input-type {
+  display: inline-block;
+  box-sizing: border-box; /*これがないとボーダー分親要素より大きくなる*/
+  font-size: 13px;
+  height: 36px;
+  line-height: 2;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.input-type:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
+  outline: 0;
+}
+
+.text-color {
+  color: #545658;
+}
+
+.extra-text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.link-color {
+  color: #01a6a4;
+}
+
+.link-color:hover {
+  color: #01bfbd;
+}
+
+.row-blank__bottom {
+  margin-bottom: 20px;
+}
+
+/* 共通項 */
+
+.wrapper {
+  background-color: #f2f6f7;
+  padding: 32px 0;
+}
+
+.inner {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.main {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 18%);
+  padding: 48px 64px;
+}
+
+.main-title {
+  color: #545658;
+  font-size: 24px;
+}
+
+.main-title__blank {
+  margin-bottom: 24px;
 }
 
 .btn-facebook {
@@ -87,18 +158,8 @@
   background-color: #f7f7f7;
 }
 
-.main .caution {
-  text-align: center;
-}
-
-.default-text {
-  color: #949697;
-  font-size: 12px;
-}
-
 .sub-title {
   margin: 20px 0;
-  text-align: center;
   position: relative;
 }
 
@@ -116,84 +177,67 @@
   background: #ececec;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translateY(-50%);
 }
 
-.form-content__name__first {
+.form-name__first {
   margin-left: 16px;
 }
 
-.form-item {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: #545658;
-}
-
-.form-item .rice {
-  color: #dd4b39;
-}
-
-.input-type {
-  display: inline-block;
-  box-sizing: border-box; /*これがないとボーダー分親要素より大きくなる*/
-  font-size: 13px;
-  height: 36px;
-  line-height: 2;
-  background-color: #fbfbfb;
-  border: 1px solid #d9d9d9;
-  border-radius: 3px;
-  padding: 5px;
-}
-
-.text-color {
-  color: #545658;
-}
-
-.row-blank__bottom {
-  margin-bottom: 20px;
-}
-
-.gender-label {
+.form-gender-choice > label {
   margin-left: 15px;
+  cursor: pointer;
 }
 
-.gender-label:first-child {
+.form-gender-choice > label:first-child {
   margin-left: 0;
 }
 
-.check {
+.radio {
   display: none;
 }
 
-.label-span {
+.radio-text {
   display: inline-block;
   padding: 3px 3px 3px 20px;
   position: relative;
 }
 
-.label-span::before {
+.radio-text::before, .radio-text::after {
+  border-radius: 50%;
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
-  border: solid 1px #d9d9d9;
+  transform: translateY(-50%);
 }
 
-.gender-label .label-span::before {
+.radio-text::before {
+  background-color: #fbfbfb;
+  border: solid 1px #d9d9d9;
   height: 14px;
   width: 14px;
-  transform: translateY(-50%);
-  background-color: #fbfbfb;
-  border-radius: 50%;
 }
 
-.birthplace-choice {
+.radio:checked + .radio-text::after {
+  background-color: #01bfbd;
+  left: 4px;
+  height: 8px;
+  width: 8px;
+}
+
+.form-origin-choice {
   position: relative;
 }
 
-.birthplace-choice::after {
+.form-origin-choice .input-type:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+
+.form-origin-choice::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -206,52 +250,78 @@
   border-bottom: solid 2px #d9d9d9;
 }
 
-.course-choice > label {
+.form-course-choice > label {
   display: block;
-}
-
-.course-choice .label-span {
-  padding: 0 0 0 25px;
-}
-
-.course-choice .label-span::before {
-  height: 15px;
-  width: 15px;
-  margin-top: -8px;
-}
-
-.label-blank__bottom {
   margin-bottom: 10px;
 }
 
-.remark .input-type {
+.form-course-choice > label:last-child {
+  margin-bottom: 0;
+}
+
+.check {
+  display: none;
+}
+
+.check-text {
+  display: inline-block;
+  padding: 0 0 0 25px;
+  position: relative;
+}
+
+.check-text::before, .check-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.check-text::before {
+  border: solid 1px #d9d9d9;
+  margin-top: -8px;
+  height: 15px;
+  width: 15px;
+}
+
+.check:checked+ .check-text::after {
+  border: solid;
+  border-color: #01bfbd;
+  border-width: 0 3px 3px 0;
+  margin-top: -12px;
+  left: 6px;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 8px;
+}
+
+.form-submit .btn:hover {
+  background-color: #01a6a4;
+}
+
+.form-submit__btn:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border: 1px solid #d9d9d9;
+}
+
+.form-remark .input-type {
   height: 100px;
 }
 
-.remark .input-init {
-  resize: none;
-}
-
-.submit .btn {
+.form-submit .btn {
   background-color: #01bfbd;
   color: #fff;
   border: none;
-}
-
-.extra-text {
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.link-color {
-  color: #01a6a4;
-}
-
-.footer {
-  text-align: center;
 }
 
 .register-mail {
   display: inline-block;
 }
 
+.footer {
+  margin-top: 32px;
+}
+
+.footer .link-color:hover {
+  border-bottom: solid 1px #01bfbd;
+}
