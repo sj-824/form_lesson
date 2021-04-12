@@ -2,6 +2,17 @@
 
 /* 共通項 */
 
+.input-init {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
 .extra-text__blank {
   margin-bottom: 8px;
 }
@@ -53,17 +64,6 @@
 
 .form-item > span {
   color: #dd4b39;
-}
-
-.input-init {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-  resize: none;
 }
 
 .input-type {
@@ -294,11 +294,17 @@
   width: 8px;
 }
 
+.form-submit .btn {
+  background-color: #01bfbd;
+  color: #fff;
+  border: none;
+}
+
 .form-submit .btn:hover {
   background-color: #01a6a4;
 }
 
-.form-submit__btn:active {
+.form-submit .form-submit__btn:active {
   background-color: #fff;
   color: #01a6a4;
   border: 1px solid #d9d9d9;
@@ -306,12 +312,6 @@
 
 .form-remark .input-type {
   height: 100px;
-}
-
-.form-submit .btn {
-  background-color: #01bfbd;
-  color: #fff;
-  border: none;
 }
 
 .register-mail {
